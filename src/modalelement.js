@@ -1,11 +1,10 @@
 // modal script goes here
-console.log("modal scripte running here !");
-
+// console.log("modal script running here !");
 export default () => {
-    let modalInfo = `
-    <div class="modal-dialog">
+      let testInfo = `
+      <div class="modal-dialog">
       <header class="modal-header">
-        Member Login
+      <h3 class="modal-title">Member Login</h3>
         <button class="close-modal" aria-label="close modal" data-close>
           ✕  
         </button>
@@ -21,28 +20,31 @@ export default () => {
       </section>
 
       <footer class="modal-footer">
-      <button class="close-modal"  data-signin >
+      <button class="close-modal btn"  data-signin >
           REGISTER 
       </button>
-      <button class="close-modal"  data-signin >
+      <button class="close-modal btn primary " data-signin >
           SIGN IN  
       </button>
       </footer>
-    </div>`;
+      </div>
+    `;
 
-  const isVisible = "is-visible";
-    const element = document.createElement("div");
-    element.id = "modal-login";
-    element.classList.add("modal");
-    // element.classList.add("is-hidden");
-    element.setAttribute("data-animation", "slideDownBottom");
-    element.innerHTML = modalInfo;
-    const closeEls = element.querySelectorAll("[data-close]");
-    for (const el of closeEls) {
-      el.addEventListener("click", function() {
-        this.parentElement.parentElement.parentElement.classList.remove(isVisible);
-      });
-    }
-    return element;
-  };
+    const isVisible = "is-visible";
+      const element = document.createElement("div");
+      element.id = "modal1";
+      element.classList.add("modal");
+    //   element.classList.add("is-visible");
+      element.setAttribute("data-animation", "slideInOutDown");
+  
+      element.innerHTML = testInfo;
+      const closeEls = element.querySelectorAll("[data-close]");
+      for (const el of closeEls) {
+        el.addEventListener("click", function() {
+          this.parentElement.parentElement.parentElement.classList.remove(isVisible);
+        });
+      }
+      return element;
+    };
+    
   

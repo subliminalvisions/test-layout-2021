@@ -9,6 +9,9 @@
 .flexDiv {
     display: flex;
 }
+.is-hidden {
+    display: none;
+}
 .uppercase {
     text-transform: uppercase;
 }
@@ -19,6 +22,7 @@ body {
     background-color: @white;
     color: @maingray;
     font-family: "canada-type-gibson";
+    margin: 0;
 }
 header {
     justify-content: space-between;
@@ -28,6 +32,7 @@ header {
         .flexDiv();
         justify-content: flex-start;
         align-items: center;
+        max-height: 4.5rem;
 
         img.logo {
             width: 75px;
@@ -47,8 +52,6 @@ header {
         }
 
     }
-
-    // border-bottom: 1px solid red;
 
     .outer-menu {
 
