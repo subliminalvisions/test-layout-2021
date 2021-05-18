@@ -28,6 +28,10 @@ header {
     justify-content: space-between;
     .flexDiv();
     
+    @media screen and (max-width: 580px) {
+            display: block;
+    }
+    
     .logo-wrap {
         .flexDiv();
         justify-content: flex-start;
@@ -63,8 +67,31 @@ header {
                 -ms-flex-align: center;
                 align-items: center;
                 min-height: 4.5em;
+
+
             }
         }
+
+        @media screen and (max-width: 580px) {
+            display: block;
+            .menu .nav {
+                list-style: none;
+                text-transform: uppercase;
+                display: block;
+            }
+        
+        
+        }
+
+
+        
+
+        // 
+
+
+
+
+
 
 
         .nav {
@@ -217,7 +244,27 @@ header {
                     max-width: 132px;
                 }
             }
+
+            &.col-12 {
+                flex-grow: 1;
+                max-width: 100%;
+                text-align: center;
+                padding-bottom: 2rem;
+
+                a.btn {
+                    margin: 2rem;
+                    color: @bigred;
+                    padding: 15px;
+                    text-align: center; 
+                    text-decoration: none;
+                    background-color: @bigred;
+                    color: @white;
+                }
+            }
         }
+
+        
+        
     }
 }
 
